@@ -1,0 +1,23 @@
+.subheading {
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 30px;
+    color: #fac564;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: white;
+}
+
+section {
+    position: relative;
+    height: 750px;
+    z-index: 0;
+}
+
+.height-100 {
+    height: 100%;
+}
+

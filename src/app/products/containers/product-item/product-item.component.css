@@ -1,0 +1,13 @@
+:host {
+    display: block;
+  }
+  .product-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+  }
+
+  pizza-form {
+    width:100%;
+  }
+  

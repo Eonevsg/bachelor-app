@@ -1,0 +1,87 @@
+<div class="main">
+
+    <div class="container">
+        <div class="booking-content">
+            <div class="booking-form">
+                <form id="booking-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+                    <h2>Registration</h2>
+                    <div class="form-group form-input">
+                        <input type="text" id="firstName" formControlName="firstName" />
+                        <label for="firstName" class="form-label">Your name</label>
+                    </div>
+                    <div [hidden]="firstName.valid || firstName.untouched" class="alert alert-danger">
+                        <div *ngIf="firstName.errors?.required">
+                            First name is required
+                        </div>
+                    </div>
+
+                    <div class="form-group form-input">
+                        <input type="text" formControlName="lastName" id="lastName" />
+                        <label for="lastName" class="form-label">Your surname</label>
+                    </div>
+                    <div [hidden]="lastName.valid || lastName.untouched" class="alert alert-danger">
+                        <div *ngIf="lastName.errors?.required">
+                            Last name is required
+                        </div>
+                    </div>
+
+                    <div class="form-group form-input">
+                        <input type="text" formControlName="username" id="username" />
+                        <label for="username" class="form-label">Your username</label>
+                    </div>
+                    <div [hidden]="username.valid || username.untouched" class="alert alert-danger">
+                        <div *ngIf="username.errors?.required">
+                            Username is required
+                        </div>
+                    </div>
+
+                    <div class="form-group form-input">
+                        <input type="text" formControlName="email" id="email" />
+                        <label for="email" class="form-label">Your email</label>
+                    </div>
+                    <div [hidden]="email.valid || email.untouched" class="alert alert-danger">
+                        <div *ngIf="email.errors?.required">
+                            Email is required
+                        </div>
+                        <div *ngIf="email.errors?.pattern">
+                            Check email pattern
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group form-input">
+                        <input type="text" formControlName="password" id="password" />
+                        <label for="password" class="form-label">Your password</label>
+                    </div>
+                    <div [hidden]="password.valid || password.untouched" class="alert alert-danger">
+                        <div *ngIf="password.errors?.required">
+                            Password is required
+                        </div>
+                    </div>
+
+                    <div class="form-group form-input">
+                        <input type="text" formControlName="confirmPassword" id="confirmPassword" />
+                        <label for="confirmPassword" class="form-label">Your password</label>
+                    </div>
+                    <div [hidden]="confirmPassword.valid || confirmPassword.untouched" class="alert alert-danger">
+                        <div *ngIf="confirmPassword.errors?.required">
+                            Confirmed password is required
+                        </div>
+                        <div *ngIf="confirmPassword.errors?.mustMatch">
+                            Passwords must match
+                        </div>
+                    </div>
+
+
+                    <div class="form-submit">
+                        <button type="submit" [disabled]="!registrationForm.valid" class="submit" id="submit"
+                            name="submit">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

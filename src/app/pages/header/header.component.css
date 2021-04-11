@@ -1,0 +1,9 @@
+nav li.nav-item:focus {
+    outline: none;
+  }
+nav li.nav-item {
+    cursor: pointer;
+}
+.navbar-toggler {
+  outline: none;
+}

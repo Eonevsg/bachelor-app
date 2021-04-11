@@ -1,0 +1,86 @@
+:host {
+    display: block;
+  }
+  .products {
+    position: relative;
+    background-color: white;
+    &__new {
+      margin: -35px -35px 35px;
+      background: #f9f9f9;
+      padding: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      pizza-item {
+        background: #fff;
+        flex: 0 0 33%;
+        margin: 0 0 55px;
+        transition: 0.2s all ease;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    outline: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-family: 'cornerstone';
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  
+  @font-face {
+    font-family: 'cornerstone';
+    src: url('/assets/fonts/cornerstone.woff2') format('woff2'),
+      url('/assets/fonts/cornerstone.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: 'cornerstone';
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .btn__ok {
+    background: #0f9675;
+    color: #fff;
+  }
+  .btn__ok:hover {
+    background: #0a7d61;
+  }
+  .btn__warning {
+    background: #ab131c;
+    color: #fff;
+  }
+  .btn__warning:hover {
+    background: #880c14;
+  }

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" [routerLink]="'/home'"><span
+                class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicous</small></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
+            (click)="toggleMenu()">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" (click)="toggleMenu()" [routerLink]="'/home'" routerLinkActive="active"><a class = "nav-link">Home</a></li>
+                <li class="nav-item" (click)="toggleMenu()" [routerLink]="'/menu'" routerLinkActive="active"><a class="nav-link">Menu</a></li>
+                <li class="nav-item" (click)="toggleMenu()" [routerLink]="'/services'" routerLinkActive="active"><a class="nav-link">Services</a></li>
+                <li class="nav-item" (click)="toggleMenu()" [routerLink]="'/blog'" routerLinkActive="active"><a class="nav-link">Blog</a></li>
+                <li class="nav-item" (click)="toggleMenu()" [routerLink]="'/about'" routerLinkActive="active"><a class="nav-link">About</a></li>
+                <li class="nav-item" (click)="toggleMenu()" [routerLink]="'/contact'" routerLinkActive="active"><a class="nav-link">Contact</a></li>
+                <li class="nav-item" (click)="toggleMenu()" [routerLink]="'/registration'" routerLinkActive="active"><a class="nav-link">Register</a></li>
+                <li *ngIf="!isLoggedIn()" class="nav-item" (click)="toggleMenu()" [routerLink]="'/log-in'" ><a class="nav-link">Log in</a></li>
+                <li *ngIf="isLoggedIn()" class="nav-item" (click)="logOut()"><a class="nav-link">Log out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
