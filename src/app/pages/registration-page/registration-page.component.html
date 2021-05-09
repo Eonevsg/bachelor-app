@@ -52,7 +52,7 @@
 
 
                     <div class="form-group form-input">
-                        <input type="text" formControlName="password" id="password" />
+                        <input type="password" formControlName="password" id="password" />
                         <label for="password" class="form-label">Your password</label>
                     </div>
                     <div [hidden]="password.valid || password.untouched" class="alert alert-danger">
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="form-group form-input">
-                        <input type="text" formControlName="confirmPassword" id="confirmPassword" />
+                        <input type="password" formControlName="confirmPassword" id="confirmPassword" />
                         <label for="confirmPassword" class="form-label">Your password</label>
                     </div>
                     <div [hidden]="confirmPassword.valid || confirmPassword.untouched" class="alert alert-danger">
